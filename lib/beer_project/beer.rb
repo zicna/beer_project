@@ -1,6 +1,8 @@
-require 'pry'
+
 
 class Beer
+
+    # attr_accessor :name, :id, :first_brewed
     @@all = []
 
     def initialize(hash)

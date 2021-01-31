@@ -2,6 +2,7 @@
 
 
 #executable file needs to look only at your environment file
+require 'bundler/setup'
 require_relative '../lib/environment'
 
 
