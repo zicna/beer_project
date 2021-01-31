@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+
+#executable file needs to look only at your environment file
+require_relative '../lib/environment'
+
+
+cli = Cli.new("https://api.punkapi.com/v2/beers")
+cli.call
+Beer.get_all_names
+
+
