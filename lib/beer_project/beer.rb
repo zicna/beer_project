@@ -13,6 +13,27 @@ class Beer
         @@all << self
     end
 
+
+# these might be considered helper methods for cli class???
+    # def self.valid_input?(input)
+    #     (1..25).include?(input.to_i) ? true : "Wrong number, please choose between 1 and 25. Thank you!"
+    # end
+
+    # def self.input_to_index(input)
+    #     index = input.to_i - 1
+    # end
+
+    # def self.get_beer_form_the_list(input)
+        
+    #     if self.valid_input?(input)
+    #         #binding.pry
+    #         puts self.all[self.input_to_index(input)].name
+    #     end
+    # end
+
+    
+
+
     def save
         @@all << self
     end
@@ -21,63 +42,28 @@ class Beer
         @@all
     end
 
-    def self.get_all_names
-        self.all.each do |beer|
+    #this will puts list of all beer names but reteurn value is still self.all (list of all instancies of Beer class)
+    # def self.print_list_of_all_beers
+    #     self.all.each.with_index(1) do |beer, index|
+    #         #binding.pry
+    #         puts "#{index}. #{beer.name}"
+    #     end
+    # end
+
+    #print list of all beers from Api class (beer_hash) without creating all instancies of Beer class
+    #thisl looks like it should be a class method
+
+    def self.display_list
+        Api.all.each.with_index(1) do |beer_hash, index|
             #binding.pry
-            puts beer.name
+            puts "#{index}. #{beer_hash[:name]}"
         end
     end
+
+    def food_parings_list
+       self.food_pairing.each.with_index(1) {|food, index| puts "#{index}. #{food}" }
+    end
+
+
 end
 
-# class Beer
-
-#     @@all = []
-#     #attr_accessor :volume, :brewers_tips, :food_pairing
-#     #attr_reader :name, :id, :ingredients, :first_brewed,
-
-#     #in this case all would be with writer and reader class
-#     # def initialize(hash)
-#     #     hash.each do |key, value|
-#     #         self.class.attr_accessor(key)
-#     #         self.send(("#{key}="), value)
-#     #         #binding.pry
-#     #     end
-#     # end
-#     #in this case we all pass in hash will be consider attr_reader's methods
-#     def initialize(hash)
-#         hash.each do |key, value|
-#             self.class.attr_reader(key)
-#             #self.send(("#{key}"), value)
-#             @key = value
-#         end
-#     end
-# end
-
-
-
-# hash = {name: "Stella", id: "32", first_brewed: "1354"}
-# beer = Beer.new(hash)
-# puts beer.name == nil
-
-# puts beer.id == nil
-# beer.volume = "10gal"
-# puts beer.volume
-
-# id
-# name
-# image_url
-# abv
-# ibu
-# target_fg
-# target_og
-# ebc
-# srm
-# ph
-# attenuation_level
-# volume
-# boil_volume
-# method
-# ingredients
-# food_pairing
-# brewers_tips
-# contributed_by

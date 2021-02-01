@@ -13,7 +13,9 @@ class Api
                 name: beer["name"],
                 id: beer["id"],
                 tagline: beer["tagline"],
-                food_pairing: beer["food_pairing"].join(", "),
+                description: beer["description"],
+                #I think I want beer["food_pairing"] come back as a array...
+                food_pairing: beer["food_pairing"],#.join(", "),
                 ingredients: "Malt: #{beer["ingredients"]["malt"].map do |malt|
                     malt["name"]
                 end.join(", ")}; Hops: #{beer["ingredients"]["hops"].map do |hops|
@@ -23,11 +25,11 @@ class Api
             }
             #binding.pry
             @@all << beer_hash
-            Beer.new(beer_hash)
+            #Beer.new(beer_hash)
         end
     end
 
-    def all
+    def self.all
         @@all
     end
 

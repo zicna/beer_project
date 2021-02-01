@@ -8,6 +8,6 @@ require_relative '../lib/environment'
 
 cli = Cli.new("https://api.punkapi.com/v2/beers")
 cli.call
-Beer.get_all_names
+
 
 
