@@ -12,6 +12,13 @@ class Api
             beer_hash = {
                 name: beer["name"],
                 id: beer["id"],
+                tagline: beer["tagline"],
+                food_pairing: beer["food_pairing"].join(", "),
+                ingredients: "Malt: #{beer["ingredients"]["malt"].map do |malt|
+                    malt["name"]
+                end.join(", ")}; Hops: #{beer["ingredients"]["hops"].map do |hops|
+                    hops["name"]
+                end.join(", ")}; Yeast: #{beer["ingredients"]["yeast"]}",
                 first_brewed: beer["first_brewed"]
             }
             #binding.pry
