@@ -1,5 +1,6 @@
 class Api
     @@all = []
+    
     attr_accessor :response
 
     def initialize(url)
@@ -8,13 +9,11 @@ class Api
     end
     def create_beer_hash
         self.response.each do |beer|
-            #binding.pry
             beer_hash = {
                 name: beer["name"],
                 id: beer["id"],
                 tagline: beer["tagline"],
                 description: beer["description"],
-                #I think I want beer["food_pairing"] come back as a array...
                 food_pairing: beer["food_pairing"],#.join(", "),
                 ingredients: "Malt: #{beer["ingredients"]["malt"].map do |malt|
                     malt["name"]
@@ -23,9 +22,8 @@ class Api
                 end.join(", ")}; Yeast: #{beer["ingredients"]["yeast"]}",
                 first_brewed: beer["first_brewed"]
             }
-            #binding.pry
             @@all << beer_hash
-            #Beer.new(beer_hash)
+            Beer.new(beer_hash)
         end
     end
 

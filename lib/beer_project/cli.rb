@@ -12,42 +12,66 @@ class Cli
     def call
         greeting
 
-        input = gets.chomp.to_i
+        Beer.print_list_of_all_beers
+        input = nil
+        until input == "exit"
+            puts "Please select number from our beer list or exit."
+            input = gets.chomp
+            if valid_input?(input.to_i)
 
-        while valid_input?(input)
-            #input = gets.chomp.to_i
-            beer = Beer.new(Api.all[input_to_index(input)])
-            puts "#{beer.name}!"
-            puts "#{random_one} Let me tell you more about this one:\n#{beer.description}"
-            puts "Would you like anything to eat today?" 
-            input2 = gets.chomp
-            if input2 == "yes"
-                 #binding.pry
-                 puts "#{beer.name} goes great with:\n"
-                 beer.food_parings_list
-                 input = gets.chomp.to_i
-            elsif input2 == "no"
-                puts "Please, select another beer from the list or 0 to exit."
-                input = gets.chomp.to_i
+                beer_object = Beer.search_by_user_input(input_to_index(input.to_i))
 
+                all_about_valid_input(beer_object)
+        
+                all_info(beer_object)
+
+                beer_object.save_user_intrests
+
+                input_one = nil
+
+                until input_one == "exit"
+                    puts "Please select number from our beer info list or exit."
+                    input_one = gets.chomp
+                    if valid_info_input?(input_one.to_i)
+                        case input_one
+                        when "1"
+                            puts beer_object.description
+                        when "2"                      
+                            puts beer_object.first_brewed
+                        when "3"
+                            puts beer_object.food_pairing
+                        when "4"
+                            puts beer_object.id
+                        when "5"
+                            puts beer_object.ingredients
+                        when "6"
+                            puts beer_object.name
+                        when "7"
+                            puts beer_object.tagline
+                        end  
+                    elsif !valid_info_input?(input_one.to_i) && input_one != "exit"
+                        puts "Wrong input!"
+                    end
+                end
+            elsif !valid_input?(input.to_i) && input != "exit"
+                puts "Wrong input!" 
             end
-
-
-            #input = gets.chomp.to_i
         end
 
+        puts "Please see list of your requires: "
+        print_user_interests(beer_object)
         goodbye
-
-    end 
-
-    #helper methods
-    #should valid_input? and input_to_index go here?
-    def valid_input?(input)
-        (1..25).include?(input)# ? true : "Wrong number, please choose between 1 and 25. Thank you!"
     end
 
-    def valid_food_input?(input,atr)
-        (1..atr).include?(input)
+    #***********************************************************
+    #helper methods
+
+    def valid_input?(input)
+        (1..25).include?(input)
+    end
+
+    def valid_info_input?(input)
+        (1..7).include?(input)
     end
 
     def input_to_index(input)
@@ -56,7 +80,6 @@ class Cli
 
     def self.get_beer_form_the_list(input)
         if self.valid_input?(input)
-            #binding.pry
             puts self.all[self.input_to_index(input)].name
         end
     end
@@ -66,55 +89,32 @@ class Cli
     end
 
     def random_one
-        arr = ["Nice one!", "Great choice", "Uuu I love that one", "That is my favorite!"]
+        arr = ["Nice one", "Great choice", "Uuu I love that one", "That is my favorite"]
         arr[rand(0..arr.length - 1)]
     end
 
     def greeting
         puts "Welcome to our BeerProject!"
         puts "Please take a look at our beer list."
+    end
 
-        Beer.display_list
+    def all_info(obj)
+        obj.instance_variables.sort.each.with_index(1) do |key,index|
+            puts "#{index}. #{key.to_s.gsub("@",'')}"
+        end
+    end
 
-        puts "Do you see anything you would want to know more about?"
-        puts "Please select number from our beer list or 0 to exit."
+    def all_about_valid_input(obj)
+        puts "#{obj.name}!"
+        puts "#{random_one}, let me tell you more about it:\n#{obj.description}"
+        puts "List of all informations about #{obj.name}:"
+    end
 
+    def print_user_interests(object)
+        object.user_intrests.each.with_index(1) do |beer, index|
+            puts "#{index}. #{beer.name}"
+           end
     end
     
 
 end
-
-# while valid_input?(input)
-
-#     beer = Beer.new(Api.all[input_to_index(input)])
-#     puts "#{beer.name}!"
-#     puts "Great selection! Let me tell you more about this one:\n#{beer.description}"
-#     puts "Would you like anything to eat today?" 
-#     input2 = gets.chomp
-#     #here we might want to put some regex to match "yes" and "Yes"
-#     binding.pry
-#     if input2 == "yes"
-#         #binding.pry
-#         puts "#{beer.name} goes great with:\n"
-#         beer.food_parings_list
-#         puts "Please select from the list above."
-#         input3 = gets.chomp.to_i
-#         puts "I'll have number #{input3}"
-#         if valid_food_input?(input3, beer.food_pairing.length)
-#             #binding.pry
-#             puts "Great choice, one #{beer.tagline} and one #{beer.food_pairing[input_to_index(input3)]} are on the way!"
-#             #beer.bill(beer.name)
-#             #beer.bill(beer.food_pairing[input3])
-#         #else 
-#         end
-#     elsif input2 == "no"
-#         puts "Okay, so just #{beer.name} then."
-#         #beer.bill
-#         #puts "#{beer.name} goes perfect with: #{beer.food_pairing}."
-#     end
-#     #binding.pry
-#     #puts beer.name
-#     #else 
-#         #puts "Wrong number, please choose between 1 and 25. Thank you!"
-#     #end
-# end
