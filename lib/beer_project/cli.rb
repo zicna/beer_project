@@ -36,7 +36,7 @@ class Cli
                         case input_one
                         when "1"
                             puts beer_object.description
-                        when "2"                      
+                        when "2"                     
                             puts beer_object.first_brewed
                         when "3"
                             puts beer_object.food_pairing
@@ -59,7 +59,7 @@ class Cli
         end
 
         
-        print_user_interests(beer_object= nil)
+        print_user_interests(beer_object)
         goodbye
     end
 
