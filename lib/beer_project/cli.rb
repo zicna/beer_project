@@ -58,8 +58,8 @@ class Cli
             end
         end
 
-        puts "Please see list of your requires: "
-        print_user_interests(beer_object)
+        
+        print_user_interests(beer_object= nil)
         goodbye
     end
 
@@ -112,9 +112,12 @@ class Cli
     end
 
     def print_user_interests(object)
-        object.user_intrests.each.with_index(1) do |beer, index|
-            puts "#{index}. #{beer.name}"
-           end
+        if object != nil
+            puts "Please see list of your requires: "
+            object.user_intrests.each.with_index(1) do |beer, index|
+                puts "#{index}. #{beer.name}"
+            end
+        end
     end
     
 
