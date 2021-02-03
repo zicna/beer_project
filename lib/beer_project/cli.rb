@@ -29,8 +29,8 @@ class Cli
 
                 input_one = nil
 
-                until input_one == "exit"
-                    puts "Please select number from our beer info list or exit."
+                until input_one == "back"
+                    puts "Please select number from our beer-info list or 'back' to go back to beer list."
                     input_one = gets.chomp
                     if valid_info_input?(input_one.to_i)
                         case input_one
@@ -49,12 +49,12 @@ class Cli
                         when "7"
                             puts beer_object.tagline
                         end  
-                    elsif !valid_info_input?(input_one.to_i) && input_one != "exit"
-                        puts "Wrong input!"
+                    elsif !valid_info_input?(input_one.to_i) && input_one != "back"
+                        puts "Oops, wrong input. Please try again!"
                     end
                 end
             elsif !valid_input?(input.to_i) && input != "exit"
-                puts "Wrong input!" 
+                puts "Oops, wrong input. Please try again!" 
             end
         end
 
@@ -94,7 +94,8 @@ class Cli
     end
 
     def greeting
-        puts "Welcome to our BeerProject!"
+        puts "*******Welcome to our BeerProject!********"
+        puts "******************************************"
         puts "Please take a look at our beer list."
     end
 
