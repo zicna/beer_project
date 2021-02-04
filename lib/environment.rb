@@ -3,7 +3,6 @@ require 'httparty'
 require 'pry'
 
 #require all files
-##require all 'TOOLSETS' (pry, ...)
 require_relative "./beer_project/version.rb"
 
 require_relative "./beer_project/cli.rb"
