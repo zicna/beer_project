@@ -15,7 +15,7 @@ class Cli
         Beer.print_list_of_all_beers
         input = nil
         until input == "exit"
-            puts "Please select number from our beer list or exit."
+            puts "Please select a number from our beer list or exit."
             input = gets.chomp
             if valid_input?(input.to_i)
 
@@ -89,14 +89,14 @@ class Cli
     end
 
     def random_one
-        arr = ["Nice one", "Great choice", "Uuu I love that one", "That is my favorite"]
+        arr = ["Bullseye", "Great choice", "Uuu I love that one", "That is my favorite"]
         arr[rand(0..arr.length - 1)]
     end
 
     def greeting
         puts "*******Welcome to our BeerProject!********"
         puts "******************************************"
-        puts "Please take a look at our beer list."
+        puts "Please take a look at our beer selection."
     end
 
     def all_info(obj)
@@ -108,12 +108,12 @@ class Cli
     def all_about_valid_input(obj)
         puts "#{obj.name}!"
         puts "#{random_one}, let me tell you more about it:\n#{obj.description}"
-        puts "List of all informations about #{obj.name}:"
+        puts "List of extra information about #{obj.name}:"
     end
 
     def print_user_interests(object)
         if object != nil
-            puts "Please see list of your requires: "
+            puts "This is a list of your inquiries: "
             object.user_intrests.each.with_index(1) do |beer, index|
                 puts "#{index}. #{beer.name}"
             end
