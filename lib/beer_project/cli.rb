@@ -12,7 +12,7 @@ class Cli
     def call
         greeting
 
-        Beer.print_list_of_all_beers
+        puts Beer.print_list_of_all_beers
         input = nil
         until input == "exit"
             puts "Please select a number from our beer list or exit."
