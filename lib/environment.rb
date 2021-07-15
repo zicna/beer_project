@@ -1,6 +1,7 @@
 ##require all 'TOOLSETS' (pry, ...)
 require 'httparty'
 require 'pry'
+require 'colorize'
 
 #require all files
 require_relative "./beer_project/version.rb"
