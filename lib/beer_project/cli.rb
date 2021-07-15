@@ -10,7 +10,9 @@ class Cli
     end
 
     def call
-        greeting
+        puts greeting.blue
+
+        puts opening_beer_pic.blue
 
         puts Beer.print_list_of_all_beers
         input = nil
@@ -20,6 +22,8 @@ class Cli
             if valid_input?(input.to_i)
 
                 beer_object = Beer.search_by_user_input(input_to_index(input.to_i))
+                
+                beer_coming    
 
                 all_about_valid_input(beer_object)
         
@@ -94,9 +98,9 @@ class Cli
     end
 
     def greeting
-        puts "*******Welcome to our BeerProject!********"
-        puts "******************************************"
-        puts "Please take a look at our beer selection."
+        "*******Welcome to our BeerProject!********
+        ******************************************
+        Please take a look at our beer selection."
     end
 
     def all_info(obj)
@@ -118,6 +122,49 @@ class Cli
                 puts "#{index}. #{beer.name}"
             end
         end
+    end
+
+    # adding pictures 
+    def beer_coming
+        puts "
+        . .
+        .. . *.
+ - -_ _-__-0oOo
+  _-_ -__ -||||)
+     ______||||______
+ ~~~~~~~~~~`""'
+        ".red
+    end
+
+    def opening_beer_pic
+         "
+        .sssssssss.
+        .sssssssssssssssssss
+      sssssssssssssssssssssssss
+     ssssssssssssssssssssssssssss
+      @@sssssssssssssssssssssss@ss
+      |s@@@@sssssssssssssss@@@@s|s
+_______|sssss@@@@@sssss@@@@@sssss|s
+/         sssssssss@sssss@sssssssss|s
+/  .------+.ssssssss@sssss@ssssssss.|
+/  /       |...sssssss@sss@sssssss...|
+|  |        |.......sss@sss@ssss......|
+|  |        |..........s@ss@sss.......|
+|  |        |...........@ss@..........|
+\  \       |............ss@..........|
+\  '------+...........ss@...........|
+\________ .........................|
+      |.........................|
+     /...........................\
+    |.............................|
+       |.......................|
+           |...............|
+
+
+__         __  __ ___      __   __  __  __
+|_  | |\ | |_  (_   |      |__) |_  |_  |__)
+|   | | \| |__ __)  |      |__) |__ |__ | \
+        ".blue
     end
     
 
