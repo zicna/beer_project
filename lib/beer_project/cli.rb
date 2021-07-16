@@ -2,6 +2,9 @@
 #we need to connect it with bin/beer_project
 
 class Cli
+# require_relative "helper_methods.rb"
+# include helper_methods.rb
+
     attr_accessor :url
 
     def initialize(url)
@@ -10,6 +13,13 @@ class Cli
     end
 
     def call
+        puts Helper.hello
+        30.times {puts ""}
+        puts "This".center(172)
+        sleep(2)
+        30.times {puts ""}
+        puts "is".center(172)
+        sleep(2)
         puts greeting.blue
 
         puts opening_beer_pic.blue
@@ -100,7 +110,7 @@ class Cli
     def greeting
         "*******Welcome to our BeerProject!********
         ******************************************
-        Please take a look at our beer selection."
+        Please take a look at our beer selection.".center(172)
     end
 
     def all_info(obj)
