@@ -11,7 +11,7 @@ require 'tty-spinner'
 
 #require all files
 require_relative "./beer_project/version.rb"
-
+#* require_relative all files/classes in our app
 require_relative "./beer_project/cli.rb"
 require_relative "./beer_project/api.rb"
 require_relative "./beer_project/beer.rb"
