@@ -14,10 +14,25 @@ GEM
     json (1.8.6)
     method_source (1.0.0)
     multi_xml (0.6.0)
-    pry (0.13.1)
+    pastel (0.8.0)
+      tty-color (~> 0.5)
+    pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    rake (12.3.2)
+    rake (12.3.3)
+    strings-ansi (0.2.0)
+    tty-color (0.6.0)
+    tty-cursor (0.7.1)
+    tty-font (0.5.0)
+    tty-progressbar (0.18.2)
+      strings-ansi (~> 0.2)
+      tty-cursor (~> 0.7)
+      tty-screen (~> 0.8)
+      unicode-display_width (>= 1.6, < 3.0)
+    tty-screen (0.8.1)
+    tty-spinner (0.9.3)
+      tty-cursor (~> 0.7)
+    unicode-display_width (2.1.0)
 
 PLATFORMS
   ruby
@@ -27,8 +42,13 @@ DEPENDENCIES
   bundler
   colorize
   httparty (~> 0.13.7)
+  pastel
   pry
   rake (~> 12.0)
+  tty-color
+  tty-font
+  tty-progressbar
+  tty-spinner
 
 BUNDLED WITH
    2.1.4
