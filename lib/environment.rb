@@ -2,6 +2,12 @@
 require 'httparty'
 require 'pry'
 require 'colorize'
+require 'tty-font'
+require 'colorize'
+require 'tty-color'
+require 'pastel'
+require 'tty-progressbar'
+require 'tty-spinner'
 
 #require all files
 require_relative "./beer_project/version.rb"
