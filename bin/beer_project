@@ -1,8 +1,12 @@
 #!/usr/bin/env ruby
+# *on line 1. we are setting environment (language) we want this gem(CLI app) to run
 
-
+# *require for all we need to get form 'root' folder
 require 'bundler/setup'
+
+# * we are requiring relative to our possition in app and we need environment since thet is where all gems are required and all files/classes are required relative
 require_relative '../lib/environment'
 
+# * we are creating new instance of Cli class and call instance method on thet newly created instance
 cli = Cli.new("https://api.punkapi.com/v2/beers")
 cli.call
