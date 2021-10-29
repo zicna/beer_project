@@ -18,7 +18,7 @@ class Cli
         puts Beer.print_list_of_all_beers
         input = nil
         until input == "exit"
-            puts "Please select a number from our beer list or exit."
+            puts Helper.paragraph_word("Please select a number from our beer list or exit.")
             input = gets.chomp
             if valid_input?(input.to_i)
 
