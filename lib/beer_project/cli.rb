@@ -13,16 +13,10 @@ class Cli
     end
 
     def call
-        puts Helper.hello
-        30.times {puts ""}
-        puts "This".center(172)
-        sleep(2)
-        30.times {puts ""}
-        puts "is".center(172)
-        sleep(2)
-        puts greeting.blue
+        puts Helper.greeting
+        puts Helper.info
 
-        puts opening_beer_pic.blue
+        # puts opening_beer_pic.blue
 
         puts Beer.print_list_of_all_beers
         input = nil
