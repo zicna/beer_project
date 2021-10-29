@@ -1,11 +1,96 @@
-# BeerProject
+# <div ><spam style="color: orange; align: center">BeerProject</spam></div>
+___
+This CLI(Command Line Interface) app is done for phase One Flatiron school. It uses open API with no key required found [here](https://api.punkapi.com/v2/beers). As one beer lover to another I hope you will enjoy. Cheers!
 
-This CLI app is done for phase One Flatiron school. It uses open API with no key required found on "https://api.punkapi.com/v2/beers"
-Please see "Usage"  part of this file for more info on how to use this app. 
-Cheers!
+![cheers](https://media.giphy.com/media/3o7TKKdv1vyUpyFLva/giphy.gif)
+___
+## <spam style="color: orange">Table of Content</spam>
+
+
+1. [Description](#description)
+2. [How to install this app](#instalation)
+3. [How to use this app](#how-to-use-this-app)
+4. [Future upgrades](#future-upgrades)
+5. [Bugs](#bugs)
+6. [Credits](#credits)
+7. [License](#license)
+
+___
+## <spam style="color: orange">Description</spam>
+
+
+This application is part of phase 1, Flatiron school where we are require to create CLI application that uses open API as data source. User will navigate through our application with terminal commands. 
+
+
+## <spam style="color: orange">Instalation</spam>
+
+  * <spam style="color: green">Forking</spam> 
+    * fork [this repository](https://github.com/zicna/beer_project.git) to your GitHub page
+  * <spam style="color: green">Copy SSH</spam> 
+    * clone newly forked repo from your GitHub to your local environment by clicking on button <spam style="background-color: green"> Code </spam> and copy to your clip board **SSH** link
+  * <spam style="color: green">Navigate</spam> 
+    * in your local environment navigate where you would like this repository to be cloned 
+    * Useful commands for navigating on your terminal (macOS)
+    ```
+    cd ..                //=> folder up
+    pwd                  //=> print working directory
+    mkdir                //=> make new directory
+    ls                   //=> list all files in current directory
+    ls -l                //=> list all files from directory as a list
+    touch new_file       //=> create new file
+    ```
+*  <spam style="color: green">Cloning</spam> 
+   *  once we are at right place run
+    ````
+    git clone command + v OR 
+    git clone git@github.com:user_name/beer_project.git
+    ````
+  
+
+## <spam style="color: orange">How to use this app</spam>
+
+Once all steps form **Instalation** are done we can open our terminal and navigate in folder where we cloned this application. 
+<!-- <div style="background-color:lightyellow; color:black">
+Note:
+In case you created new folder and then clone this repository you will need go level down to folder. ````
+</div> -->
+
+* <spam style="color:green">Start application<spam/>
+  ````
+  ./bin/beer_project 
+  ````
+  You will be greeted and welcomed to our <spam style="color: orange">beer_project</spam> application.
+* <spam style="color:green">Level One</spam>
+  We can choose to see any beer from our list by typing numbers from 1 to 25 or exit to turn down application
+  ````
+  numbers from 1 to 25      //=> this will get us more info on beer with that number
+  exit      //=> this will lead us to exit our application
+  ````
+* <spam style="color:green">Level Two</spam>
+    * Once we choose beer that we are intrested in now we can choose to see more info on this beer by selecting numbers from 1 to 7 or back to see list of all beers
+  ````
+  numbers 1 to 7    //=> choose on info about beer we picked on level one
+  back              //=> back to level one 
+  ````
+  * we can stay on this level and choose to see more on same beer (numbers 1 to 7) or go back where we can pick to see new beer of exit 
+
+* <spam style="color:green">We are leaving</spam> 🥲
+  * List of all your inquiries will be printed and have a good day.
+
+
+## <spam style="color: orange">Future upgrades</spam>
+
+## <spam style="color: orange">Bugs</spam>
+## <spam style="color: orange">License</spam>
+
+
+___
+
 
 
 ## Usage (all commands are for your terminal)
+
+
 
 Check-in what folder you are currently on:
     $pwd (for mac) or $dir (for windows)
@@ -34,6 +119,8 @@ On your way out we will output 'list of your inquiries' and greet you with an ho
 
 ## Development
 
+
+
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
@@ -43,10 +130,15 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 Bug reports and pull requests are welcome on GitHub at https://github.com/zicna/beer_project. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/zicna/beer_project/blob/master/CODE_OF_CONDUCT.md).
 
 
-## License
 
 This gem is not yet available. 
 
 ## Code of Conduct
 
 Everyone interacting in the BeerProject project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/zicna/beer_project/blob/master/CODE_OF_CONDUCT.md).
+
+<spam style="color: orange">Hello</spam>
+<spam style="color: green">Hello</spam>
+<spam style="color: red">Hello</spam>
+<spam style="color: yellow">Hello</spam>
+

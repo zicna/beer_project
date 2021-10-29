@@ -11,9 +11,8 @@ class Cli
 
     def call
         puts Helper.greeting
-        # puts Helper.info
-        # puts opening_beer_pic.blue
-         puts Helper.loading_info
+        
+        puts Helper.loading_info
 
         puts Beer.print_list_of_all_beers
         input = nil
