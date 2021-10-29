@@ -96,7 +96,7 @@ ___
 
 Pull requests are more then welcome [here](https://github.com/zicna/beer_project). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to folow the [code of conduct](https://github.com/zicna/beer_project/blob/master/CODE_OF_CONDUCT.md). Thank you!!! 🙏🙏🙏
 ___
-## <spam style="color: orange">Bugs</spam>
+## <spam style="color: orange">Bugs 🐛 🐛 🐛</spam>
 Let us know if you find any via email <a href="mailto:zivkovicmilan1987@gmail.com">here</a>.
 ___
 ## <spam style="color: orange">License</spam>
