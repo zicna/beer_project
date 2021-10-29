@@ -11,8 +11,8 @@ ___
 2. [How to install this app](#instalation)
 3. [How to use this app](#how-to-use-this-app)
 4. [Future upgrades](#future-upgrades)
-5. [Bugs](#bugs)
-6. [Credits](#credits)
+5. [Contributions](#Contributions)
+6. [Bugs](#bugs)
 7. [License](#license)
 
 ___
@@ -54,7 +54,11 @@ Once all steps form **Instalation** are done we can open our terminal and naviga
 Note:
 In case you created new folder and then clone this repository you will need go level down to folder. ````
 </div> -->
-
+* <spam style="color:green">Before start<spam/>
+  * Before we start our application we need to install dependencies specified in our Gemfile by running
+  ````
+  bundle install
+  ````
 * <spam style="color:green">Start application<spam/>
   ````
   ./bin/beer_project 
@@ -75,14 +79,27 @@ In case you created new folder and then clone this repository you will need go l
   * we can stay on this level and choose to see more on same beer (numbers 1 to 7) or go back where we can pick to see new beer of exit 
 
 * <spam style="color:green">We are leaving</spam> 🥲
-  * List of all your inquiries will be printed and have a good day.
+  ```
+  exit  //=> and our journey comes to an end
+  ```
+  * List of all your inquiries will be printed.
 
 
 ## <spam style="color: orange">Future upgrades</spam>
+   * [x] Fix `README.md` file for beter uderstanding of our application
+  * [x] Find and add new `gems` for styling to create beter user experience
+  * [ ] Create it more user friendly by adding new `helper_methods` that will display commands for navigating through our application
+   * [ ] Use newly added  gems for styling 
+   * [ ] Commands shouldn't be case sensitive
+
+## <spam style="color:orange">Contributions</spam>
+
+Pull requests are more then welcome [here](https://github.com/zicna/beer_project). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to folow the [code of conduct](https://github.com/zicna/beer_project/blob/master/CODE_OF_CONDUCT.md). Thank you!!! 🙏🙏🙏
 
 ## <spam style="color: orange">Bugs</spam>
+Let us know if you find any via email <a href="mailto:zivkovicmilan1987@gmail.com">here</a>.
 ## <spam style="color: orange">License</spam>
-
+MIT License
 
 ___
 
