@@ -1,4 +1,4 @@
-# <div ><spam style="color: orange; align: center">🍺 🍺 🍺Beer Project 🍺 🍺 🍺</spam></div>
+# <div ><spam style="color: orange; align: center">🍺 🍺 🍺 Beer Project 🍺 🍺 🍺</spam></div>
 
 ---
 
@@ -120,7 +120,7 @@ Let us know if you find any via email <a href="mailto:zivkovicmilan1987@gmail.co
 
 ## <spam style="color: orange">License</spam>
 
-MIT License
+This application is avaiable as open source under the terms of the [MIT License](LICENSE).
 
 ---
 
