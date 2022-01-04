@@ -66,10 +66,16 @@ In case you created new folder and then clone this repository you will need go l
   ```
   bundle install
   ```
+
+- <spam style="color:green">For best user experience<spam/>
+  1. screen size: `2560x1600`
+  2. clear terminal: run `clear` befoore start
+
 - <spam style="color:green">Start application<spam/>
   ```
   ./bin/beer_project
   ```
+
   You will be greeted and welcomed to our <spam style="color: orange">beer_project</spam> application.
 - <spam style="color:green">Level One</spam>
   We can choose to see any beer from our list by typing numbers from 1 to 25 or exit to turn down application
