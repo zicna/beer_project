@@ -11,12 +11,13 @@ This Command Line Interface (CLI) application is done for phase One Flatiron sch
 ## <spam style="color: orange">Table of Content</spam>
 
 1. [Description](#description)
-2. [How to install this app](#instalation)
-3. [How to use this app](#how-to-use-this-app)
-4. [Future upgrades](#future-upgrades)
-5. [Contributions](#Contributions)
-6. [Bugs](#bugs)
-7. [License](#license)
+2. [Built with](#built-with)
+3. [How to install this app](#instalation)
+4. [How to use this app](#how-to-use-this-app)
+5. [Future upgrades](#future-upgrades)
+6. [Contributions](#Contributions)
+7. [Bugs](#bugs)
+8. [License](#license)
 
 ---
 
@@ -24,6 +25,21 @@ This Command Line Interface (CLI) application is done for phase One Flatiron sch
 
 This application is part of phase 1, Flatiron school where we are require to create CLI application that uses open API as data source. User will navigate through our application with terminal commands.
 
+---
+## <spam style="color: orange">Built with</spam>
+
+- The programming language used: <spam style="color:red">ruby 2.6.1p33<spam/>
+- The gems used: 
+  - <spam style="color:red">httparty 0.13.7<spam/>
+  - <spam style="color:red"> rake 0.13.7<spam/>
+- The gems used for styling: 
+  - <spam style="color:red">colorize<spam/>
+  - <spam style="color:red">tty-color<spam/>
+  - <spam style="color:red">pastel<spam/>
+  - <spam style="color:red">tty-font<spam/>
+  - <spam style="color:red">tty-progressbar<spam/>
+  - <spam style="color:red">tty-spiner<spam/>
+  
 ---
 
 ## <spam style="color: orange">Instalation</spam>
