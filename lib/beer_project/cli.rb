@@ -12,15 +12,15 @@ class Cli
     def call
         puts Helper.greeting
         
-        puts Helper.loading_info
+        puts Helper.loading_info(90, "Loading beer list . . . ")
 
         puts Beer.print_list_of_all_beers
         input = nil
         until input == "exit"
             puts Helper.paragraph_word("Please select a number from our beer list or exit.")
-            input = gets.chomp
+            input = gets.chomp.downcase
             if valid_input?(input.to_i)
-
+                puts Helper.loading_info(90, "Loading beer . . . ")
                 beer_object = Beer.search_by_user_input(input_to_index(input.to_i))
                 puts "✅  ✅  ✅  ✅  ✅ "
                 beer_coming    
@@ -35,10 +35,10 @@ class Cli
 
                 until input_one == "back"
                     puts Helper.paragraph_word("Please select number from our beer-info list or 'back' to go back to beer list.")
-                    input_one = gets.chomp
+                    input_one = gets.chomp.downcase
                     if valid_info_input?(input_one.to_i)
                         puts "✅  ✅  ✅  ✅  ✅  "
-
+                        puts Helper.loading_info(90, "Loading info about #{beer_object.name} beer. . . ")
                         case input_one
                         when "1"
                             puts beer_object.description
@@ -93,7 +93,7 @@ class Cli
     end
 
     def goodbye
-        puts "Until next time. Have a great day!"
+        puts "Until next time. Have a great day! 👋 👋 👋 👋 👋 "
     end
 
     def random_one
@@ -114,7 +114,8 @@ class Cli
     end
 
     def all_about_valid_input(obj)
-        puts "#{obj.name}!"
+        puts Helper.heading("#{obj.name}!")
+        Helper.space(1)
         puts "#{random_one}, let me tell you more about it:\n#{obj.description}"
         puts "List of extra information about #{obj.name}:"
     end

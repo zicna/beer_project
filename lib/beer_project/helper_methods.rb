@@ -2,16 +2,16 @@ class Helper
     # *self.greeting is called in cli.rb file to greet anyone entring our app
     def self.greeting
         Helper.space(10)
-        Helper.header_word("This",4 )
+        Helper.header_word("This",1 )
         sleep(1)
         Helper.space(10)
-        Helper.header_word("is", 4)
+        Helper.header_word("is", 1)
         sleep(1)
         Helper.space(10)
-        Helper.header_word("beer project,", 4)
+        Helper.header_word("beer project,", 1)
         sleep(1)
         Helper.space(10)
-        Helper.header_word("WELCOME", 4)
+        Helper.header_word("WELCOME", 1)
     end
     # *self.header_world will be called in self.greeting for each word separatly
     def self.header_word(word, space)
@@ -29,9 +29,9 @@ class Helper
 
     end
     # *adding loading bar...
-    def self.loading_info
-        bar = TTY::ProgressBar.new("Loading beer list ... :bar", total: 90)
-        90.times do
+    def self.loading_info(num, text)
+        bar = TTY::ProgressBar.new("#{text} :bar", total: 90)
+        num.times do
             sleep(0.01)
             bar.advance(1)
         end
@@ -48,6 +48,12 @@ class Helper
         pastel = Pastel.new
         self.space(2)
         pastel.red(word)
+    end
+
+    def self.heading(beer_name)
+        pastel = Pastel.new
+        self.space(2)
+        pastel.green(beer_name)
     end
 
 
