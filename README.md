@@ -82,6 +82,7 @@ Once all steps form **Instalation** are done we can open our terminal and naviga
 - <spam style="color:green">For best user experience<spam/>
   1. screen size: `2560x1600`
   2. clear terminal: run `clear` befoore start
+  3. dark background
 
 - <spam style="color:green">Start application<spam/>
   ```
