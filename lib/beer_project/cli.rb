@@ -117,6 +117,7 @@ class Cli
         puts Helper.heading("#{obj.name}!")
         Helper.space(1)
         puts "#{random_one}, let me tell you more about it:\n#{obj.description}"
+        Helper.space(1)
         puts "List of extra information about #{obj.name}:"
     end
 
