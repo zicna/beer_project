@@ -22,7 +22,7 @@ class Cli
             if valid_input?(input.to_i)
 
                 beer_object = Beer.search_by_user_input(input_to_index(input.to_i))
-                
+                puts "✅  ✅  ✅  ✅  ✅ "
                 beer_coming    
 
                 all_about_valid_input(beer_object)
@@ -34,9 +34,11 @@ class Cli
                 input_one = nil
 
                 until input_one == "back"
-                    puts "Please select number from our beer-info list or 'back' to go back to beer list."
+                    puts Helper.paragraph_word("Please select number from our beer-info list or 'back' to go back to beer list.")
                     input_one = gets.chomp
                     if valid_info_input?(input_one.to_i)
+                        puts "✅  ✅  ✅  ✅  ✅  "
+
                         case input_one
                         when "1"
                             puts beer_object.description
@@ -54,11 +56,13 @@ class Cli
                             puts beer_object.tagline
                         end  
                     elsif !valid_info_input?(input_one.to_i) && input_one != "back"
-                        puts "Oops, wrong input. Please try again!"
+                        puts "❌ ❌ ❌ ❌ ❌"
+                        puts Helper.wrong_input("Oops, wrong input. Please try again!")
                     end
                 end
             elsif !valid_input?(input.to_i) && input != "exit"
-                puts "Oops, wrong input. Please try again!" 
+                puts "❌ ❌ ❌ ❌ ❌"
+                puts Helper.wrong_input("Oops, wrong input. Please try again!")
             end
         end
 
