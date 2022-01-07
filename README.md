@@ -2,7 +2,10 @@
 
 ---
 
-This Command Line Interface (CLI) application is done for phase One Flatiron school. It uses open Application Programming Interface (API) with no key required found [here](https://api.punkapi.com/v2/beers). As one beer lover to another I hope you will enjoy. Cheers!
+Welcome to Beer Project, a CLI application made for the beer enthusiast who wants to know more about craft beer. We have a selection of 25 finest crafts that will giggle your taste buds.  Find out how it's made, food pairing, ingredients, and much more. From one beer lover, I hope you will enjoy it. Cheers and remember, enjoy responsibly!
+
+
+<!-- This is Command Line Interface (CLI) application is done for phase One Flatiron school. It uses open Application Programming Interface (API) with no key required found [here](https://api.punkapi.com/v2/beers). As one beer lover to another I hope you will enjoy. Cheers! -->
 
 ![cheers](https://media.giphy.com/media/3o7TKKdv1vyUpyFLva/giphy.gif)
 
@@ -23,7 +26,8 @@ This Command Line Interface (CLI) application is done for phase One Flatiron sch
 
 ## <spam style="color: orange">Description</spam>
 
-This application is part of phase 1, Flatiron school where we are require to create CLI application that uses open API as data source. User will navigate through our application with terminal commands.
+This is Command Line Interface (CLI) application that uses open Application Programming Interface (API) with no key required found [here](https://api.punkapi.com/v2/beers). It utilizes 'httparty' gem for making a call to API resulting in the hash structure of beer data used throughout our application. Multiple gems are used to create a better user experience. Please read through the rest of the readme for more in-depth details about this application.
+<!-- This application is part of phase 1, Flatiron school where we are require to create CLI application that uses open API as data source. User will navigate through our application with terminal commands. -->
 
 ---
 ## <spam style="color: orange">Built with</spam>
