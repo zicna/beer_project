@@ -44,5 +44,11 @@ class Helper
         pastel.green(word)
     end
 
+    def self.wrong_input(word)
+        pastel = Pastel.new
+        self.space(2)
+        pastel.red(word)
+    end
+
 
 end
