@@ -12,7 +12,7 @@ class Cli
     def call
         puts Helper.greeting
         
-        puts Helper.loading_info(90, "Loading beer list . . . ")
+        puts Helper.loading_bar(90, "Loading beer list . . . ")
 
         puts Beer.print_list_of_all_beers
         input = nil
@@ -20,9 +20,10 @@ class Cli
             puts Helper.paragraph_word("Please select a number from our beer list or exit.")
             input = gets.chomp.downcase
             if valid_input?(input.to_i)
-                puts Helper.loading_info(90, "Loading beer . . . ")
+                # ! for production call with 1 insted 90
+                puts Helper.loading_bar(1, "Loading beer . . . ")
                 beer_object = Beer.search_by_user_input(input_to_index(input.to_i))
-                puts "✅  ✅  ✅  ✅  ✅ "
+                Helper.right_icons
                 beer_coming    
 
                 all_about_valid_input(beer_object)
@@ -33,12 +34,12 @@ class Cli
 
                 input_one = nil
 
-                until input_one == "back"
+                until input_one == "back" || "exit"
                     puts Helper.paragraph_word("Please select number from our beer-info list or 'back' to go back to beer list.")
                     input_one = gets.chomp.downcase
                     if valid_info_input?(input_one.to_i)
-                        puts "✅  ✅  ✅  ✅  ✅  "
-                        puts Helper.loading_info(90, "Loading info about #{beer_object.name} beer. . . ")
+                        Helper.right_icons
+                        puts Helper.loading_bar(90, "Loading info about #{beer_object.name} beer. . . ")
                         case input_one
                         when "1"
                             puts beer_object.description
@@ -56,13 +57,13 @@ class Cli
                             puts beer_object.tagline
                         end  
                     elsif !valid_info_input?(input_one.to_i) && input_one != "back"
-                        puts "❌ ❌ ❌ ❌ ❌"
-                        puts Helper.wrong_input("Oops, wrong input. Please try again!")
+                        Helper.wrong_icons
+                        Helper.wrong_input("Oops, wrong input. Please try again!")
                     end
                 end
             elsif !valid_input?(input.to_i) && input != "exit"
-                puts "❌ ❌ ❌ ❌ ❌"
-                puts Helper.wrong_input("Oops, wrong input. Please try again!")
+                Helper.wrong_icons
+                Helper.wrong_input("Oops, wrong input. Please try again!")
             end
         end
 
@@ -114,7 +115,7 @@ class Cli
     end
 
     def all_about_valid_input(obj)
-        puts Helper.heading("#{obj.name}!")
+        puts Helper.h2("#{obj.name}!")
         Helper.space(1)
         puts "#{random_one}, let me tell you more about it:\n#{obj.description}"
         Helper.space(1)
