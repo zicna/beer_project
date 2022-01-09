@@ -10,18 +10,17 @@ class Cli
     end
 
     def call
-        puts Helper.greeting
-        
-        puts Helper.loading_bar(90, "Loading beer list . . . ")
+        Helper.greeting
+        Helper.loading_bar("Loading beer list . . . ")
 
         puts Beer.print_list_of_all_beers
         input = nil
         until input == "exit"
-            puts Helper.paragraph_word("Please select a number from our beer list or exit.")
+            Helper.paragraph_word("Please select a number from our beer list or exit.")
             input = gets.chomp.downcase
             if valid_input?(input.to_i)
                 # ! for production call with 1 insted 90
-                puts Helper.loading_bar(1, "Loading beer . . . ")
+                Helper.loading_bar("Loading beer . . . ")
                 beer_object = Beer.search_by_user_input(input_to_index(input.to_i))
                 Helper.right_icons
                 beer_coming    
@@ -39,7 +38,7 @@ class Cli
                     input_one = gets.chomp.downcase
                     if valid_info_input?(input_one.to_i)
                         Helper.right_icons
-                        puts Helper.loading_bar(90, "Loading info about #{beer_object.name} beer. . . ")
+                        puts Helper.loading_bar("Loading info about #{beer_object.name} beer. . . ")
                         case input_one
                         when "1"
                             puts beer_object.description
@@ -131,7 +130,6 @@ class Cli
         end
     end
 
-    # adding pictures 
     def beer_coming
         puts "
         . .
@@ -142,37 +140,4 @@ class Cli
  ~~~~~~~~~~`""'
         ".red
     end
-
-    def opening_beer_pic
-         "
-        .sssssssss.
-        .sssssssssssssssssss
-      sssssssssssssssssssssssss
-     ssssssssssssssssssssssssssss
-      @@sssssssssssssssssssssss@ss
-      |s@@@@sssssssssssssss@@@@s|s
-_______|sssss@@@@@sssss@@@@@sssss|s
-/         sssssssss@sssss@sssssssss|s
-/  .------+.ssssssss@sssss@ssssssss.|
-/  /       |...sssssss@sss@sssssss...|
-|  |        |.......sss@sss@ssss......|
-|  |        |..........s@ss@sss.......|
-|  |        |...........@ss@..........|
-\  \       |............ss@..........|
-\  '------+...........ss@...........|
-\________ .........................|
-      |.........................|
-     /...........................\
-    |.............................|
-       |.......................|
-           |...............|
-
-
-__         __  __ ___      __   __  __  __
-|_  | |\ | |_  (_   |      |__) |_  |_  |__)
-|   | | \| |__ __)  |      |__) |__ |__ | \
-        ".blue
-    end
-    
-
 end
