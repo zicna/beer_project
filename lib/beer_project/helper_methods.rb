@@ -32,26 +32,27 @@ class Helper
         num.times {puts " "}
     end
 
-    def self.loading_bar(num, text)
+    def self.loading_bar(text)
         # ! for production call with 1 insted 90
-        bar = TTY::ProgressBar.new("#{text} :bar", total: 1)
-        num.times do
+        bar = TTY::ProgressBar.new("#{text} :bar", total: 90)
+        b = 90.times do
             sleep(0.01)
             bar.advance(1)
         end
+        puts b
     end
 
     # * for every time app asks user to input something we will use this method
     def self.paragraph_word(word)
         pastel = Pastel.new
         self.space(5)
-        pastel.green(word)
+        puts pastel.green(word)
     end
     # * everytime user has wrong input
     def self.wrong_input(word)
         pastel = Pastel.new
         self.space(2)
-        puts pastel.red(word)
+        p pastel.red(word)
     end
 
     def self.wrong_icons
@@ -61,8 +62,4 @@ class Helper
     def self.right_icons
         puts "✅  ✅  ✅  ✅  ✅ "
     end
-
-    
-
-
 end
