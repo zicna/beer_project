@@ -12,7 +12,6 @@ class Beer
         save
     end
 
-
     def save
         @@all << self
     end
@@ -30,7 +29,6 @@ class Beer
     end
 
     def self.print_list_of_all_beers
-        #binding.pry
         self.all.each.with_index(1).map do |beer, index|
             "#{index}. #{beer.name}"
         end
