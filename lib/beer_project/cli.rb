@@ -1,6 +1,4 @@
- 
 #we need to connect it with bin/beer_project
-
 class Cli
     attr_accessor :url
 
@@ -22,6 +20,7 @@ class Cli
                 # ! for production call with 1 insted 90
                 Helper.loading_bar("Loading beer . . . ")
                 beer_object = Beer.search_by_user_input(input_to_index(input.to_i))
+
                 Helper.right_icons
                 beer_coming    
 
@@ -33,12 +32,13 @@ class Cli
 
                 input_one = nil
 
-                until input_one == "back" || "exit"
+                until input_one == "back" 
+
                     puts Helper.paragraph_word("Please select number from our beer-info list or 'back' to go back to beer list.")
                     input_one = gets.chomp.downcase
                     if valid_info_input?(input_one.to_i)
                         Helper.right_icons
-                        puts Helper.loading_bar("Loading info about #{beer_object.name} beer. . . ")
+                        Helper.loading_bar("Loading info about #{beer_object.name} beer. . . ")
                         case input_one
                         when "1"
                             puts beer_object.description
@@ -72,8 +72,6 @@ class Cli
     end
 
     #***********************************************************
-    #helper methods
-
     def valid_input?(input)
         (1..25).include?(input)
     end
@@ -101,11 +99,11 @@ class Cli
         arr[rand(0..arr.length - 1)]
     end
 
-    def greeting
-        "*******Welcome to our BeerProject!********
-        ******************************************
-        Please take a look at our beer selection.".center(172)
-    end
+    # def greeting
+    #     "*******Welcome to our BeerProject!********
+    #     ******************************************
+    #     Please take a look at our beer selection.".center(172)
+    # end
 
     def all_info(obj)
         obj.instance_variables.sort.each.with_index(1) do |key,index|

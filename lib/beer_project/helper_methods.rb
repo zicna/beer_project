@@ -52,7 +52,7 @@ class Helper
     def self.wrong_input(word)
         pastel = Pastel.new
         self.space(2)
-        p pastel.red(word)
+        puts pastel.red(word)
     end
 
     def self.wrong_icons
