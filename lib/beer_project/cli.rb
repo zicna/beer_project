@@ -144,7 +144,7 @@ class Cli
         if object != nil
             puts "This is a list of your inquiries: "
             object.user_intrests.each.with_index(1) do |beer, index|
-                puts "#{index}. #{beer.name}"
+                puts "#{index}. #{beer.name} 🍺 🍺 🍺 🍺 🍺"
             end
         end
     end
