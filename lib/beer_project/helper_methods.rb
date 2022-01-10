@@ -4,13 +4,13 @@ class Helper
         Helper.space(7)
         Helper.h1("This",1 )
         # ! for production call with 0 insted of 4
-        sleep(0)
+        sleep(1)
         Helper.space(7)
         Helper.h1("is", 1)
-        sleep(0)
+        sleep(1)
         Helper.space(7)
         Helper.h1("beer project,", 1)
-        sleep(0)
+        sleep(1)
         Helper.space(7)
         Helper.h1("WELCOME", 1)
     end
