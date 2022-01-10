@@ -62,4 +62,13 @@ class Helper
     def self.right_icons
         puts "✅  ✅  ✅  ✅  ✅ "
     end
+
+    def self.help
+        puts "
+        type 'back' 🔙 to go level up ⬆;
+        type 'exit' 🔚 to close application;
+        type nubers as istructed to get more info;
+        type 'help' to repet this message
+        "
+    end
 end
