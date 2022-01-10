@@ -81,7 +81,7 @@ Once all steps form **Instalation** are done we can open our terminal and naviga
 
 - <spam style="color:green">For best user experience<spam/>
   1. screen size: `2560x1600`
-  2. clear terminal: run `clear` befoore start
+  2. clear terminal: run `clear` before start
   3. dark background
 
 - <spam style="color:green">Start application<spam/>
@@ -90,28 +90,32 @@ Once all steps form **Instalation** are done we can open our terminal and naviga
   ```
 
   You will be greeted and welcomed to our <spam style="color: orange">beer_project</spam> application.
-- <spam style="color:green">Level One</spam>
+- <spam style="color:green">Level 1️⃣ </spam>
+
   We can choose to see any beer from our list by typing numbers from 1 to 25 or exit to turn down application
   ```
-  numbers from 1 to 25      //=> this will get us more info on beer with that number
-  exit      //=> this will lead us to exit our application
+  numbers 1 to 25   //=> this will get us more info on beer with that number
+  help              //=> this will print all our options on this level of application
+  print list        //=> this will reprint beer list
+  exit              //=> this will lead us to exit our application
   ```
-- <spam style="color:green">Level Two</spam>
+- <spam style="color:green">Level 2️⃣</spam>
 
   - Once we choose beer that we are intrested in now we can choose to see more info on this beer by selecting numbers from 1 to 7 or back to see list of all beers
 
   ```
   numbers 1 to 7    //=> choose on info about beer we picked on level one
+  exit              //=> this will lead us to exit application 
+  help              //=> this will print all our options on this level of application
+  print list        //=> this will reprint beer info list
   back              //=> back to level one
   ```
 
   - we can stay on this level and choose to see more on same beer (numbers 1 to 7) or go back where we can pick to see new beer of exit
 
-- <spam style="color:green">We are leaving</spam> 🥲
-  ```
-  exit  //=> and our journey comes to an end
-  ```
-  - List of all your inquiries will be printed.
+- <spam style="color:green">At the end </spam> 🥲
+  
+  List of all your inquiries will be printed.
 
 ---
 
@@ -119,9 +123,8 @@ Once all steps form **Instalation** are done we can open our terminal and naviga
 
 - [x] Fix `README.md` file for beter uderstanding of our application
 - [x] Find and add new `gems` for styling to create beter user experience
-- [ ] Create it more user friendly by adding new `helper_methods` that will display commands for navigating through our application
-- [ ] Use newly added gems for styling
-- [ ] Commands shouldn't be case sensitive
+- [x] Create it more user friendly by adding new `helper_methods` that will display commands for navigating through our application
+- [x] Use newly added gems for styling
 
 ---
 
