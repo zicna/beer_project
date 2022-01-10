@@ -93,7 +93,9 @@ class Cli
         end
         Helper.space(2)
         print_user_interests(beer_object)
+        Helper.space(2)
         goodbye
+        Helper.space(2)
     end
 
     #*********************HELPER METHODS**************************************
