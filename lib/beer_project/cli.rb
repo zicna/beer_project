@@ -73,6 +73,11 @@ class Cli
                                 Helper.loading_bar("Loading info . . . ")
                                 Helper.help_level_two
                             end
+                        else
+                            Helper.space(2)
+                Helper.loading_bar("Loading info . . . ")
+                Helper.wrong_icons
+                Helper.wrong_input("Oops, wrong input. Type 'help' or try again!")
                         end
                     end
                     # Helper.space(2)
