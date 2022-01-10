@@ -62,18 +62,20 @@ class Helper
     def self.right_icons
         puts "✅  ✅  ✅  ✅  ✅ "
     end
-
-    def self.help_level_two
+    
+    def self.help_level_one
         puts "
-        type 'back' 🔙 to go level up ⬆;
         type 'exit' 🔚 to close application;
-        type nubers as istructed to get more info;
-        type 'help' to repet this message
+        type numbers as istructed to get more info;
+        type 'print list' to see beer list;
+        type 'help' to repeat this message
         "
     end
 
-    def self.help_level_one
+    def self.help_level_two
         puts "
+        type 'print list' to see options for choseen beer;
+        type 'back' 🔙 to go level up ⬆;
         type 'exit' 🔚 to close application;
         type numbers as istructed to get more info;
         type 'help' to repeat this message

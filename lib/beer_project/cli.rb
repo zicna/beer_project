@@ -32,6 +32,8 @@ class Cli
                     beer_object.save_user_intrests
                 elsif input == "help"
                     Helper.help_level_one
+                elsif input == "print_options"
+                    puts Beer.print_list_of_all_beers
                 end
                 
 
