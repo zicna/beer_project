@@ -17,18 +17,23 @@ class Cli
             Helper.paragraph_word("Please select a number from our beer list or exit.")
             input = gets.chomp.downcase
             if valid_input?(input)
-                # ! for production call with 1 insted 90
-                Helper.loading_bar("Loading beer . . . ")
-                beer_object = Beer.search_by_user_input(input_to_index(input.to_i))
+                if input.to_i != 0
+                    # ! for production call with 1 insted 90
+                    Helper.loading_bar("Loading beer . . . ")
+                    beer_object = Beer.search_by_user_input(input_to_index(input.to_i))
 
-                Helper.right_icons
-                beer_coming    
+                    Helper.right_icons
+                    beer_coming    
 
-                all_about_valid_input(beer_object)
-        
-                all_info(beer_object)
+                    all_about_valid_input(beer_object)
 
-                beer_object.save_user_intrests
+                    all_info(beer_object)
+
+                    beer_object.save_user_intrests
+                elsif input == "help"
+                    Helper.help_level_one
+                end
+                
 
                 # input = nil
 
@@ -38,23 +43,28 @@ class Cli
                     input = gets.chomp.downcase
                     if valid_info_input?(input)
                         Helper.right_icons
-                        Helper.loading_bar("Loading info about #{beer_object.name} beer. . . ")
-                        case input
-                        when "1"
-                            puts beer_object.description
-                        when "2"                     
-                            puts beer_object.first_brewed
-                        when "3"
-                            puts beer_object.food_pairing
-                        when "4"
-                            puts beer_object.id
-                        when "5"
-                            puts beer_object.ingredients
-                        when "6"
-                            puts beer_object.name
-                        when "7"
-                            puts beer_object.tagline
-                        end  
+                        if input.to_i != 0
+                            Helper.loading_bar("Loading info about #{beer_object.name} beer. . . ")
+                            case input
+                            when "1"
+                                puts beer_object.description
+                            when "2"                     
+                                puts beer_object.first_brewed
+                            when "3"
+                                puts beer_object.food_pairing
+                            when "4"
+                                puts beer_object.id
+                            when "5"
+                                puts beer_object.ingredients
+                            when "6"
+                                puts beer_object.name
+                            when "7"
+                                puts beer_object.tagline
+                            end
+                        elsif input == "help"
+                            Helper.help_level_two
+                        end 
+                        
                     elsif !valid_info_input?(input.to_i) && input != "back"
                         Helper.wrong_icons
                         Helper.wrong_input("Oops, wrong input. Please try again!")
@@ -74,12 +84,11 @@ class Cli
 
     #***********************************************************
     def valid_input?(input)
-        (1..25).include?(input.to_i)
+        (1..25).include?(input.to_i) || ["back", "help", "exit", "print list"].include?(input)
     end
 
     def valid_info_input?(input)
-        binding.pry
-        (1..7).include?(input.to_i) || ["back", "help", "exit"].include?(input)
+        (1..7).include?(input.to_i) || ["back", "help", "exit", "print list"].include?(input)
     end
 
     def input_to_index(input)

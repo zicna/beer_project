@@ -63,12 +63,20 @@ class Helper
         puts "✅  ✅  ✅  ✅  ✅ "
     end
 
-    def self.help
+    def self.help_level_two
         puts "
         type 'back' 🔙 to go level up ⬆;
         type 'exit' 🔚 to close application;
         type nubers as istructed to get more info;
         type 'help' to repet this message
+        "
+    end
+
+    def self.help_level_one
+        puts "
+        type 'exit' 🔚 to close application;
+        type numbers as istructed to get more info;
+        type 'help' to repeat this message
         "
     end
 end
